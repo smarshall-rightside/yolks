@@ -3,7 +3,7 @@ name: Build & Push Rust Image to GHCR
 on:
   push:
     branches: [ main ]
-
+  workflow_dispatch:  # ✅ Enables manual run from the Actions UI
 jobs:
   build:
     runs-on: ubuntu-latest
