@@ -5,6 +5,7 @@ periodically to ensure dependencies are always up-to-date.
 
 Images are hosted on `ghcr.io` and exist under the `games`, `installers`, and `yolks` spaces. The following logic
 is used when determining which space an image will live under:
+If you are working from a fork, GitHub Actions will push images under your repository owner (e.g., `ghcr.io/<youruser>`). Update references accordingly to avoid permission errors.
 
 * `oses` — base images containing core packages to get you started.
 * `games` — anything within the `games` folder in the repository. These are images built for running a specific game
