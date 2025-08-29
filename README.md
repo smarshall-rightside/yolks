@@ -35,6 +35,7 @@ is tagged correctly.
 * [`games`](https://github.com/pterodactyl/yolks/tree/master/games)
   * [`rust`](https://github.com/pterodactyl/yolks/tree/master/games/rust)
     * `ghcr.io/pterodactyl/games:rust`
+    * Supports installing [Carbon](https://github.com/Carbon-Mod/Carbon) or [uMod (Oxide)](https://umod.org/) by setting the `FRAMEWORK` variable to `carbon` or `oxide`.
   * [`source`](https://github.com/pterodactyl/yolks/tree/master/games/source)
     * `ghcr.io/pterodactyl/games:source`
 * [`golang`](https://github.com/pterodactyl/yolks/tree/master/go)
