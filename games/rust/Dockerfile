@@ -34,10 +34,11 @@ RUN			dpkg --add-architecture i386 \
 			&& apt upgrade -y \
 			&& apt install -y ca-certificates gnupg lib32gcc-s1 lib32stdc++6 unzip curl iproute2 tzdata libgdiplus libsdl2-2.0-0:i386 \
                         && curl -sL https://deb.nodesource.com/setup_18.x | bash - \
-			&& apt install -y nodejs \
-			&& mkdir /node_modules \
-			&& npm install --prefix / ws \
-			&& useradd -d /home/container -m container
+                        && apt install -y nodejs \
+                        && npm install -g ws \
+                        && mkdir /node_modules \
+                        && ln -s $(npm root -g)/ws /node_modules/ws \
+                        && useradd -d /home/container -m container
 
 USER 		container
 ENV  		USER=container HOME=/home/container
